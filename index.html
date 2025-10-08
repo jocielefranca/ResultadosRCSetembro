@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relacionamento com o Cliente - Resultados 2025</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-green: #002818;
+            --secondary-green: #066248;
+            --primary-blue: #003366;
+            --secondary-blue: #1a5276;
+            --primary-purple: #4a148c;
+            --secondary-purple: #6a1b9a;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --white: #ffffff;
+            --light-gray: #f8faf9;
+            --medium-gray: #e0e0e0;
+            --shadow: rgba(0, 40, 24, 0.08);
+            --transition: all 0.3s ease;
+            --sla-critical: #ff6b6b;
+            --sla-warning: #ffb347;
+            --sla-good: #66bb6a;
+            --sla-excellent: #4CAF50;
+            --sla-record: #26c6da;
+            --primary-orange: #e65100;
+            --secondary-orange: #ff9800;
+        }
+
+        body {
+            background: var(--light-gray);
+            min-height: 100vh;
+            color: var(--text-dark);
+            padding-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .presentation-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+
+        .company-logo {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+
+        .main-title {
+            font-size: 2.8rem;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .main-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: var(--primary-green);
+            border-radius: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .slide {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px var(--shadow);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideIn 0.8s ease-out forwards;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide:hover {
+            box-shadow: 0 15px 40px rgba(0, 40, 24, 0.12);
+        }
+
+        .slide:nth-child(2) { animation-delay: 0.2s; }
+        .slide:nth-child(3) { animation-delay: 0.4s; }
+        .slide:nth-child(4) { animation-delay: 0.6s; }
+        .slide:nth-child(5) { animation-delay: 0.8s; }
+        .slide:nth-child(6) { animation-delay: 1.0s; }
+        .slide:nth-child(7) { animation-delay: 1.2s; }
+        .slide:nth-child(8) { animation-delay: 1.4s; }
+        .slide:nth-child(9) { animation-delay: 1.6s; }
+        .slide:nth-child(10) { animation-delay: 1.8s; }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-header {
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 30px;
+            margin: -40px -40px 30px -40px;
+            border-radius: 16px 16px 0 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slide-header.blue {
+            background: var(--primary-blue);
+        }
+        
+        .slide-header.purple {
+            background: var(--primary-purple);
+        }
+
+        .slide-header.orange {
+            background: var(--primary-orange);
+        }
+
+        .slide-title {
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .slide-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+            position: relative;
+            z-index: 2;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .metric-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 14px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid var(--medium-gray);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--primary-green);
+        }
+        
+        .metric-card.blue::before {
+            background: var(--primary-blue);
+        }
+        
+        .metric-card.purple::before {
+            background: var(--primary-purple);
+        }
+        
+        .metric-card.orange::before {
+            background: var(--primary-orange);
+        }
+
+        .metric-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+        }
+
+        .metric-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-green);
+        }
+        
+        .metric-card.blue .metric-icon {
+            color: var(--primary-blue);
+        }
+        
+        .metric-card.purple .metric-icon {
+            color: var(--primary-purple);
+        }
+        
+        .metric-card.orange .metric-icon {
+            color: var(--primary-orange);
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 5px;
+        }
+        
+        .metric-card.blue .metric-value {
+            color: var(--primary-blue);
+        }
+        
+        .metric-card.purple .metric-value {
+            color: var(--primary-purple);
+        }
+        
+        .metric-card.orange .metric-value {
+            color: var(--primary-orange);
+        }
+
+        .metric-label {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .chart-container {
+            background: var(--white);
+            border-radius: 14px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 5px solid var(--primary-green);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+        
+        .chart-container.blue {
+            border-left: 5px solid var(--primary-blue);
+        }
+        
+        .chart-container.purple {
+            border-left: 5px solid var(--primary-purple);
+        }
+        
+        .chart-container.orange {
+            border-left: 5px solid var(--primary-orange);
+        }
+
+        .chart-title {
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .chart-container.blue .chart-title {
+            color: var(--primary-blue);
+        }
+        
+        .chart-container.purple .chart-title {
+            color: var(--primary-purple);
+        }
+        
+        .chart-container.orange .chart-title {
+            color: var(--primary-orange);
+        }
+
+        .chart-title i {
+            font-size: 1.2em;
+        }
+
+        .bar-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .bar-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .bar-label {
+            min-width: 200px;
+            font-weight: 500;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        .bar-container {
+            flex: 1;
+            height: 35px;
+            background: var(--light-gray);
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 18px;
+            transition: width 1.5s ease-out;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 15px;
+            background: var(--primary-green);
+            min-width: 30px;
+        }
+        
+        .bar-fill.blue {
+            background: var(--primary-blue);
+        }
+        
+        .bar-fill.purple {
+            background: var(--primary-purple);
+        }
+        
+        .bar-fill.orange {
+            background: var(--primary-orange);
+        }
+
+        .bar-value {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            white-space: nowrap;
+        }
+        
+        .small-bar-value {
+            position: absolute;
+            right: 10px;
+            color: var(--white);
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            z-index: 2;
+        }
+
+        .evolution-section {
+            background: var(--light-gray);
+            border-radius: 14px;
+            padding: 30px;
+            margin: 25px 0;
+            border-left: 5px solid var(--primary-green);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+        
+        .evolution-section.blue {
+            border-left: 5px solid var(--primary-blue);
+        }
+        
+        .evolution-section.purple {
+            border-left: 5px solid var(--primary-purple);
+        }
+        
+        .evolution-section.orange {
+            border-left: 5px solid var(--primary-orange);
+        }
+
+        .trend-positive {
+            color: #2e7d2e;
+            font-weight: 600;
+        }
+
+        .trend-negative {
+            color: #d32f2f;
+            font-weight: 600;
+        }
+
+        .insight-box {
+            background: var(--secondary-green);
+            color: var(--white);
+            padding: 25px;
+            border-radius: 14px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .insight-box.blue {
+            background: var(--primary-blue);
+        }
+        
+        .insight-box.purple {
+            background: var(--primary-purple);
+        }
+        
+        .insight-box.orange {
+            background: var(--primary-orange);
+        }
+
+        .insight-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .progress-bar {
+            background: rgba(255,255,255,0.2);
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--white);
+            border-radius: 4px;
+            transition: width 2s ease-out;
+        }
+
+        .sla-indicator {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin: 5px;
+            min-width: 120px;
+            text-align: center;
+        }
+
+        .sla-excellent { background: var(--sla-excellent); color: white; }
+        .sla-good { background: var(--sla-good); color: white; }
+        .sla-warning { background: var(--sla-warning); color: white; }
+        .sla-critical { background: var(--sla-critical); color: white; }
+        .sla-record { 
+            background: var(--sla-record); 
+            color: white;
+            animation: pulse 2s infinite;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .footer a {
+            color: var(--primary-green);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer a:hover {
+            color: var(--secondary-green);
+            text-decoration: underline;
+        }
+
+        .highlight-september {
+            animation: pulse 2s infinite;
+            box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 165, 0, 0.4); }
+            70% { box-shadow: 0 0 0 12px rgba(255, 165, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 165, 0, 0); }
+        }
+        
+        .sla-scale-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            padding: 0 10px;
+        }
+        
+        .sla-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+        }
+
+        .impact-section {
+            background: #fff8e1;
+            border-radius: 14px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid #ff9800;
+        }
+
+        .impact-title {
+            font-size: 1.5rem;
+            color: #e65100;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .projection-section {
+            background: #e8f5e8;
+            border-radius: 14px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid #4caf50;
+        }
+
+        .projection-title {
+            font-size: 1.5rem;
+            color: #2e7d32;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .conclusion-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .conclusion-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-green);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .conclusion-item.blue {
+            border-left-color: var(--primary-blue);
+        }
+
+        .conclusion-item.purple {
+            border-left-color: var(--primary-purple);
+        }
+
+        .conclusion-item.orange {
+            border-left-color: var(--primary-orange);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .status-improving { background: #e8f5e8; color: #2e7d32; }
+        .status-good { background: #e3f2fd; color: #1565c0; }
+        .status-excellent { background: #e8f5e8; color: #2e7d32; }
+        .status-record { background: #fff3e0; color: #e65100; }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .comparison-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid var(--medium-gray);
+            transition: var(--transition);
+        }
+
+        .comparison-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .comparison-value {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+
+        .comparison-label {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .growth-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 15px;
+            background: #e8f5e8;
+            color: #2e7d32;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .initiatives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .initiative-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-blue);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .initiative-card.orange {
+            border-left-color: var(--primary-orange);
+        }
+
+        .initiative-card.purple {
+            border-left-color: var(--primary-purple);
+        }
+
+        .initiative-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .initiative-card.orange .initiative-title {
+            color: var(--primary-orange);
+        }
+
+        .initiative-card.purple .initiative-title {
+            color: var(--primary-purple);
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            
+            .slide-header {
+                padding: 20px;
+                margin: -20px -20px 20px -20px;
+            }
+            
+            .slide-title {
+                font-size: 1.8rem;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .main-title {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .conclusion-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .initiatives-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Cabeçalho Principal -->
+        <div class="header">
+            <div class="company-logo">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <h1 class="main-title">Relacionamento com o Cliente</h1>
+            <p class="subtitle">Análise de Resultados e Evolução 2025 - Janeiro a Setembro</p>
+        </div>
+
+        <!-- Slide 1: Visão Geral -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2 class="slide-title">Visão Geral dos Resultados - Setembro/25</h2>
+                <p class="slide-subtitle">Principais métricas e desempenho do período atualizado</p>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card highlight-september">
+                    <div class="metric-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="metric-value">10.647</div>
+                    <div class="metric-label">Total 2025 (até setembro)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="metric-value">+131%</div>
+                    <div class="metric-label">Crescimento Jan/25 vs Set/25</div>
+                </div>
+                <div class="metric-card highlight-september">
+                    <div class="metric-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <div class="metric-value">2,0</div>
+                    <div class="metric-label">SLA de Setembro (dias)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="metric-value">68%</div>
+                    <div class="metric-label">Resolução Mesmo Dia (Set)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="metric-value">9,5</div>
+                    <div class="metric-label">Nota Satisfação Setembro</div>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <h3 class="insight-title">
+                    <i class="fas fa-trophy"></i> Evolução Consistente em 2025
+                </h3>
+                <div class="metrics-grid" style="margin: 15px 0;">
+                    <div class="metric-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                        <div class="metric-value" style="color: white;">10,4→2,0</div>
+                        <div class="metric-label" style="color: rgba(255,255,255,0.8);">SLA: 81% Melhoria</div>
+                    </div>
+                    <div class="metric-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                        <div class="metric-value" style="color: white;">34%→68%</div>
+                        <div class="metric-label" style="color: rgba(255,255,255,0.8);">Resolução Mesmo Dia</div>
+                    </div>
+                    <div class="metric-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                        <div class="metric-value" style="color: white;">60→69</div>
+                        <div class="metric-label" style="color: rgba(255,255,255,0.8);">NPS: +9 pontos</div>
+                    </div>
+                </div>
+                <p><strong>Crescimento sustentável:</strong> SLA melhorou 81% enquanto o volume cresce 131%</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 85%;"></div>
+                </div>
+                <p style="font-size: 0.9rem; margin-top: 10px; opacity: 0.9;">Objetivo: Consolidar qualidade com crescimento</p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Evolução do Volume -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2 class="slide-title">Evolução do Volume de Atendimentos 2025</h2>
+                <p class="slide-subtitle">Análise Mensal - Janeiro a Setembro/25</p>
+            </div>
+            
+            <div class="chart-container">
+                <h3 class="chart-title">
+                    <i class="fas fa-chart-line"></i> Volume de Atendimentos por Mês
+                </h3>
+                <div class="bar-chart">
+                    <div class="bar-item">
+                        <div class="bar-label">Jan/25 - 618</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 43%;">
+                                <div class="bar-value">618</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Fev/25 - 688</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 48%;">
+                                <div class="bar-value">688</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Mar/25 - 737</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 52%;">
+                                <div class="bar-value">737</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Abr/25 - 797</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 56%;">
+                                <div class="bar-value">797</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Mai/25 - 1.002</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 70%;">
+                                <div class="bar-value">1.002</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Jun/25 - 941</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 66%;">
+                                <div class="bar-value">941</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Jul/25 - 1.044</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 73%;">
+                                <div class="bar-value">1.044</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Ago/25 - 1.389</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 97%;">
+                                <div class="bar-value">1.389</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item highlight-september">
+                        <div class="bar-label">Set/25 - 1.431</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 100%;">
+                                <div class="bar-value">1.431</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nova Seção: Impactos no Volume -->
+            <div class="impact-section">
+                <h3 class="impact-title">
+                    <i class="fas fa-chart-bar"></i> Impactos no Volume Geral - Setembro
+                </h3>
+                <div class="comparison-grid">
+                    <div class="comparison-card">
+                        <div class="comparison-label">Caucaia - Agosto</div>
+                        <div class="comparison-value">96</div>
+                        <div class="comparison-label">atendimentos</div>
+                    </div>
+                    <div class="comparison-card highlight-september">
+                        <div class="comparison-label">Caucaia - Setembro</div>
+                        <div class="comparison-value">231</div>
+                        <div class="comparison-label">atendimentos</div>
+                        <div class="growth-badge">+141%</div>
+                    </div>
+                    <div class="comparison-card">
+                        <div class="comparison-label">Assistência Técnica - Ago</div>
+                        <div class="comparison-value">82</div>
+                        <div class="comparison-label">atendimentos</div>
+                    </div>
+                    <div class="comparison-card highlight-september">
+                        <div class="comparison-label">Assistência Técnica - Set</div>
+                        <div class="comparison-value">164</div>
+                        <div class="comparison-label">atendimentos</div>
+                        <div class="growth-badge">+100%</div>
+                    </div>
+                </div>
+                <p style="margin-top: 15px; text-align: center; font-weight: 500;">
+                    <strong>Destaque:</strong> Caucaia e Assistência Técnica tiveram crescimento expressivo, dobrando o volume em setembro
+                </p>
+            </div>
+
+            <div class="projection-section">
+                <h3 class="projection-title">
+                    <i class="fas fa-crystal-ball"></i> Acumulado 2025 e Projeção Anual
+                </h3>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">9.075</div>
+                        <div class="metric-label">Total Janeiro-Setembro 2025</div>
+                    </div>
+                    <div class="metric-card highlight-september">
+                        <div class="metric-value">~12.196</div>
+                        <div class="metric-label">Projeção Fechamento 2025</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">1.183/mês</div>
+                        <div class="metric-label">Média Mensal 2025</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Desempenho Diagonal -->
+        <div class="slide">
+            <div class="slide-header orange">
+                <h2 class="slide-title">Desempenho Diagonal</h2>
+                <p class="slide-subtitle">Comparativo Anual e Análise Detalhada</p>
+            </div>
+
+            <div class="chart-container orange">
+                <h3 class="chart-title">
+                    <i class="fas fa-building"></i> Comparativo Anual Diagonal
+                </h3>
+                <div class="comparison-grid">
+                    <div class="comparison-card orange">
+                        <div class="comparison-label">2024 - Total Anual</div>
+                        <div class="comparison-value">1.221</div>
+                        <div class="comparison-label">atendimentos</div>
+                    </div>
+                    <div class="comparison-card orange highlight-september">
+                        <div class="comparison-label">2025 - Até Setembro</div>
+                        <div class="comparison-value">1.524</div>
+                        <div class="comparison-label">atendimentos</div>
+                        <div class="growth-badge">+25% vs 2024</div>
+                    </div>
+                    <div class="comparison-card orange">
+                        <div class="comparison-label">Satisfação Set/25</div>
+                        <div class="comparison-value">9,8/10</div>
+                        <div class="comparison-label">Nota do Cliente</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="evolution-section orange">
+                <h3 class="chart-title">
+                    <i class="fas fa-trophy"></i> Conquistas da Diagonal
+                </h3>
+                <div class="metrics-grid">
+                    <div class="metric-card orange">
+                        <div class="metric-icon">
+                            <i class="fas fa-arrow-up"></i>
+                        </div>
+                        <div class="metric-value">+49,7%</div>
+                        <div class="metric-label">Crescimento média mês vs 2024 - Mantendo satisfação </div>
+                    </div>
+                    <div class="metric-card orange">
+                        <div class="metric-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="metric-value">3 meses</div>
+                        <div class="metric-label">Faltam para 2025</div>
+                    </div>
+                    <div class="metric-card orange">
+                        <div class="metric-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="metric-value">9,8/10</div>
+                        <div class="metric-label">Satisfação Setembro</div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 15px; font-weight: 500;">
+                    <strong>Resultado histórico:</strong> Já superamos o volume total de 2024 e ainda temos 3 meses pela frente!
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 4: Evolução do SLA -->
+        <div class="slide">
+            <div class="slide-header blue">
+                <h2 class="slide-title">Evolução do SLA 2025</h2>
+                <p class="slide-subtitle">Desempenho Mensal do Tempo de Resolução</p>
+            </div>
+
+            <div class="chart-container blue">
+                <h3 class="chart-title">
+                    <i class="fas fa-clock"></i> Evolução do SLA Mensal (dias)
+                </h3>
+                <div class="bar-chart">
+                    <div class="bar-item">
+                        <div class="bar-label">Jan/25 - 10,4 dias</div>
+                        <div class="bar-container">
+                            <div class="bar-fill blue" style="width: 100%;">
+                                <div class="bar-value">10,4 dias</div>
+                            </div>
+                        </div>
+                        <span class="status-badge status-improving">Melhorando</span>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Fev/25 - 8,3 dias</div>
+                        <div class="bar-container">
+                            <div class="bar-fill blue" style="width: 80%;">
+                                <div class="bar-value">8,3 dias</div>
+                            </div>
+                        </div>
+                        <span class="status-badge status-improving">Melhorando</span>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Mar/25 - 5,9 dias</div>
+                        <div class="bar-container">
+                            <div class="bar-fill blue" style="width: 57%;">
+                                <div class="bar-value">5,9 dias</div>
+                            </div>
+                        </div>
+                        <span class="status-badge status-good">Bom</span>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Abr/25 - 4,5 dias</div>
+                        <div class="bar-container">
+                            <div class="bar-fill blue" style="width: 43%;">
+                                <div class="bar-value">4,5 dias</div>
+                            </div>
+                        </div>
+                        <span class="status-badge status-good">Bom</span>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Mai/25 - 1,7 dias</div>
+                        <div class="bar-container">
+                            <div class="bar-fill blue" style="width: 16%;">
+                                <div class="bar-value">1,7 dias</div>
+                            </div>
+                        </div>
+                        <span class="status-badge status-excellent">Excelente</span>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Jun/25 - 0,9 dias</div>
+                        <div class="bar-container">
+                            <div class="bar-fill blue" style="width: 9%;">
+                                <div class="bar-value">0,9 dias</div>
+                            </div>
+                        </div>
+                        <span class="status-badge status-record">Recorde</span>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Jul/25 - 1,2 dias</div>
+                        <div class="bar-container">
+                            <div class="bar-fill blue" style="width: 12%;">
+                                <div class="bar-value">1,2 dias</div>
+                            </div>
+                        </div>
+                        <span class="status-badge status-excellent">Excelente</span>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Ago/25 - 1,63 dias</div>
+                        <div class="bar-container">
+                            <div class="bar-fill blue" style="width: 16%;">
+                                <div class="bar-value">1,63 dias</div>
+                            </div>
+                        </div>
+                        <span class="status-badge status-excellent">Excelente</span>
+                    </div>
+                    <div class="bar-item highlight-september">
+                        <div class="bar-label">Set/25 - 2,0 dias</div>
+                        <div class="bar-container">
+                            <div class="bar-fill blue" style="width: 19%;">
+                                <div class="bar-value">2,0 dias</div>
+                            </div>
+                        </div>
+                        <span class="status-badge status-excellent">Excelente</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="evolution-section blue">
+                <h3 class="chart-title">
+                    <i class="fas fa-tachometer-alt"></i> Resumo da Performance do SLA
+                </h3>
+                <div class="metrics-grid">
+                    <div class="metric-card blue">
+                        <div class="metric-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="metric-value sla-record">0,9</div>
+                        <div class="metric-label">Melhor SLA (Junho)</div>
+                    </div>
+                    <div class="metric-card blue">
+                        <div class="metric-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="metric-value">-81%</div>
+                        <div class="metric-label">Redução vs Janeiro</div>
+                    </div>
+                    <div class="metric-card blue">
+                        <div class="metric-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="metric-value">2,0</div>
+                        <div class="metric-label">SLA Atual (Setembro)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Resolução no Mesmo Dia -->
+        <div class="slide">
+            <div class="slide-header purple">
+                <h2 class="slide-title">Resolução no Mesmo Dia</h2>
+                <p class="slide-subtitle">Evolução Histórica da Agilidade no Atendimento</p>
+            </div>
+
+            <div class="chart-container purple">
+                <h3 class="chart-title">
+                    <i class="fas fa-bolt"></i> Taxa de Resolução no Mesmo Dia - Histórico Completo
+                </h3>
+                <div class="bar-chart">
+                    <div class="bar-item">
+                        <div class="bar-label">Nov/24 - 41%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill purple" style="width: 41%;">
+                                <div class="bar-value">41%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Dez/24 - 44%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill purple" style="width: 44%;">
+                                <div class="bar-value">44%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Jan/25 - 34%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill purple" style="width: 34%;">
+                                <div class="bar-value">34%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Fev/25 - 48%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill purple" style="width: 48%;">
+                                <div class="bar-value">48%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Mar/25 - 55%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill purple" style="width: 55%;">
+                                <div class="bar-value">55%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Abr/25 - 64%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill purple" style="width: 64%;">
+                                <div class="bar-value">64%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Mai/25 - 73%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill purple" style="width: 73%;">
+                                <div class="bar-value">73%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Jun/25 - 77%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill purple" style="width: 77%;">
+                                <div class="bar-value">77%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Jul/25 - 75%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill purple" style="width: 75%;">
+                                <div class="bar-value">75%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Ago/25 - 71%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill purple" style="width: 71%;">
+                                <div class="bar-value">71%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item highlight-september">
+                        <div class="bar-label">Set/25 - 68%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill purple" style="width: 68%;">
+                                <div class="bar-value">68%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="evolution-section purple">
+                <h3 class="chart-title">
+                    <i class="fas fa-chart-bar"></i> Melhoria Contínua
+                </h3>
+                <div class="metrics-grid">
+                    <div class="metric-card purple">
+                        <div class="metric-icon">
+                            <i class="fas fa-arrow-up"></i>
+                        </div>
+                        <div class="metric-value">+100%</div>
+                        <div class="metric-label">Crescimento Jan-Set</div>
+                    </div>
+                    <div class="metric-card purple">
+                        <div class="metric-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="metric-value">77%</div>
+                        <div class="metric-label">Recorde (Junho)</div>
+                    </div>
+                    <div class="metric-card purple">
+                        <div class="metric-icon">
+                            <i class="fas fa-trend-up"></i>
+                        </div>
+                        <div class="metric-value">+34 p.p.</div>
+                        <div class="metric-label">Evolução Percentual</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Evolução do NPS -->
+        <div class="slide">
+            <div class="slide-header orange">
+                <h2 class="slide-title">Evolução do NPS Mensal</h2>
+                <p class="slide-subtitle">Satisfação do Cliente ao Longo de 2025</p>
+            </div>
+
+            <div class="chart-container orange">
+                <h3 class="chart-title">
+                    <i class="fas fa-star"></i> NPS Mensal - Janeiro a Setembro 2025
+                </h3>
+                <div class="bar-chart">
+                    <div class="bar-item">
+                        <div class="bar-label">Janeiro - 60</div>
+                        <div class="bar-container">
+                            <div class="bar-fill orange" style="width: 60%;">
+                                <div class="bar-value">60</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Fevereiro - 62</div>
+                        <div class="bar-container">
+                            <div class="bar-fill orange" style="width: 62%;">
+                                <div class="bar-value">62</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Março - 57</div>
+                        <div class="bar-container">
+                            <div class="bar-fill orange" style="width: 57%;">
+                                <div class="bar-value">57</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Abril - 60</div>
+                        <div class="bar-container">
+                            <div class="bar-fill orange" style="width: 60%;">
+                                <div class="bar-value">60</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Maio - 65</div>
+                        <div class="bar-container">
+                            <div class="bar-fill orange" style="width: 65%;">
+                                <div class="bar-value">65</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Junho - 67</div>
+                        <div class="bar-container">
+                            <div class="bar-fill orange" style="width: 67%;">
+                                <div class="bar-value">67</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Julho - 71</div>
+                        <div class="bar-container">
+                            <div class="bar-fill orange" style="width: 71%;">
+                                <div class="bar-value">71</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Agosto - 71</div>
+                        <div class="bar-container">
+                            <div class="bar-fill orange" style="width: 71%;">
+                                <div class="bar-value">71</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item highlight-september">
+                        <div class="bar-label">Setembro - 69</div>
+                        <div class="bar-container">
+                            <div class="bar-fill orange" style="width: 69%;">
+                                <div class="bar-value">69</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="evolution-section orange">
+                <h3 class="chart-title">
+                    <i class="fas fa-chart-line"></i> Performance do NPS
+                </h3>
+                <div class="metrics-grid">
+                    <div class="metric-card orange">
+                        <div class="metric-icon">
+                            <i class="fas fa-arrow-up"></i>
+                        </div>
+                        <div class="metric-value">+15%</div>
+                        <div class="metric-label">Crescimento Jan-Set</div>
+                    </div>
+                    <div class="metric-card orange">
+                        <div class="metric-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="metric-value">71</div>
+                        <div class="metric-label">Recorde (Jul/Ago)</div>
+                    </div>
+                    <div class="metric-card orange">
+                        <div class="metric-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="metric-value">69</div>
+                        <div class="metric-label">NPS Atual (Set)</div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- Slide 6.1: NPS por Etapa da Jornada -->
+<div class="slide">
+    <div class="slide-header">
+        <h2 class="slide-title">NPS por Etapa da Jornada</h2>
+        <p class="slide-subtitle">Desempenho do NPS por Ponto de Contato</p>
+    </div>
+
+    <div class="chart-container">
+        <h3 class="chart-title">
+            <i class="fas fa-chart-bar"></i> NPS por Etapa da Jornada
+        </h3>
+        <div class="bar-chart">
+            <div class="bar-item">
+                <div class="bar-label">Pós-Venda (100)</div>
+                <div class="bar-container">
+                    <div class="bar-fill" style="width: 100%;">
+                        <div class="bar-value">100</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-label">Pós-Financiamento (91)</div>
+                <div class="bar-container">
+                    <div class="bar-fill" style="width: 91%;">
+                        <div class="bar-value">91</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-label">Pós-Vistoria (56)</div>
+                <div class="bar-container">
+                    <div class="bar-fill" style="width: 56%;">
+                        <div class="bar-value">56</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-label">Pós-Assistência Técnica (53)</div>
+                <div class="bar-container">
+                    <div class="bar-fill" style="width: 53%;">
+                        <div class="bar-value">53</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-label">Pós-Chaves (16)</div>
+                <div class="bar-container">
+                    <div class="bar-fill" style="width: 16%;">
+                        <div class="bar-value">16</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-label">Pós-Ocupação (-8)</div>
+                <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%; background: var(--sla-critical);">
+                        <div class="small-bar-value">-8</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="evolution-section">
+        <h3 class="chart-title">
+            <i class="fas fa-map-marker-alt"></i> Etapas da Jornada do Cliente
+        </h3>
+        <div class="conclusion-grid">
+            <div class="conclusion-item">
+                <h4>Pós-Venda</h4>
+                <p>Atendimento geral pós-venda com excelente satisfação</p>
+                <span class="status-badge status-record">NPS 100</span>
+            </div>
+            <div class="conclusion-item blue">
+                <h4>Pós-Financiamento</h4>
+                <p>Acompanhamento após contratação de financiamento</p>
+                <span class="status-badge status-excellent">NPS 91</span>
+            </div>
+            <div class="conclusion-item purple">
+                <h4>Pós-Vistoria</h4>
+                <p>Suporte após processo de vistoria</p>
+                <span class="status-badge status-good">NPS 56</span>
+            </div>
+            <div class="conclusion-item orange">
+                <h4>Pós-Assistência Técnica</h4>
+                <p>Acompanhamento pós-serviço técnico</p>
+                <span class="status-badge status-good">NPS 53</span>
+            </div>
+            <div class="conclusion-item">
+                <h4>Pós-Chaves</h4>
+                <p>Suporte após entrega das chaves</p>
+                <span class="status-badge status-warning">NPS 16</span>
+            </div>
+            <div class="conclusion-item" style="border-left-color: var(--sla-critical);">
+                <h4>Pós-Ocupação</h4>
+                <p>Acompanhamento após ocupação do imóvel</p>
+                <span class="status-badge status-critical">NPS -8</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="insight-box">
+        <h3 class="insight-title">
+            <i class="fas fa-chart-line"></i> Análise do NPS por Etapa
+        </h3>
+        <div class="metrics-grid" style="margin: 15px 0;">
+            <div class="metric-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                <div class="metric-value" style="color: white;">100</div>
+                <div class="metric-label" style="color: rgba(255,255,255,0.8);">Melhor NPS (Pós-Venda)</div>
+            </div>
+            <div class="metric-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                <div class="metric-value" style="color: white;">-8</div>
+                <div class="metric-label" style="color: rgba(255,255,255,0.8);">Pior NPS (Pós-Ocupação)</div>
+            </div>
+            <div class="metric-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                <div class="metric-value" style="color: white;">4/6</div>
+                <div class="metric-label" style="color: rgba(255,255,255,0.8);">Etapas com NPS Positivo</div>
+            </div>
+        </div>
+        <p><strong>Oportunidade identificada:</strong> Pós-Ocupação do Mirante apresenta NPS negativo, mas um pouco melhor que a medição anterior que foi -39/p>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 67%;"></div>
+        </div>
+        <p style="font-size: 0.9rem; margin-top: 10px; opacity: 0.9;">Foco: O impacto do processo do Belvedere foi sentido na pesquisa de Vistoria (29) e de Chaves</p>
+    </div>
+</div>
+
+        <!-- Slide 7: Taxa de Conversão de Leads -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2 class="slide-title">Taxa de Conversão de Leads</h2>
+                <p class="slide-subtitle">Desempenho Mensal vs Meta de 30%</p>
+            </div>
+
+            <div class="chart-container">
+                <h3 class="chart-title">
+                    <i class="fas fa-chart-pie"></i> Conversão de Leads - 2025
+                </h3>
+                <div class="bar-chart">
+                    <div class="bar-item">
+                        <div class="bar-label">Meta - 30%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 30%; background: #666;">
+                                <div class="bar-value">30%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Janeiro - 33%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 33%;">
+                                <div class="bar-value">33%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Fevereiro - 47%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 47%;">
+                                <div class="bar-value">47%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Março - 32%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 32%;">
+                                <div class="bar-value">32%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Abril - 36%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 36%;">
+                                <div class="bar-value">36%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Maio - 23%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 23%; background: var(--sla-warning);">
+                                <div class="bar-value">23%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Junho - 26%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 26%; background: var(--sla-warning);">
+                                <div class="bar-value">26%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Julho - 32%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 32%;">
+                                <div class="bar-value">32%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item highlight-september">
+                        <div class="bar-label">Agosto - 38%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 38%;">
+                                <div class="bar-value">38%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="evolution-section">
+                <h3 class="chart-title">
+                    <i class="fas fa-percent"></i> Performance da Conversão
+                </h3>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="metric-value">47%</div>
+                        <div class="metric-label">Melhor Mês (Fev)</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="metric-value">38%</div>
+                        <div class="metric-label">Atual (Ago)</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="metric-value">+15%</div>
+                        <div class="metric-label">Acima da Meta</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Taxa de Reincidência -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2 class="slide-title">Taxa de Reincidência</h2>
+                <p class="slide-subtitle">Evolução da Qualidade do Atendimento</p>
+            </div>
+
+            <div class="chart-container">
+                <h3 class="chart-title">
+                    <i class="fas fa-sync-alt"></i> Taxa de Reincidência - 2025
+                </h3>
+                <div class="bar-chart">
+                    <div class="bar-item">
+                        <div class="bar-label">Janeiro - 21%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 21%; background: var(--sla-warning);">
+                                <div class="bar-value">21%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Fevereiro - 19%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 19%; background: var(--sla-good);">
+                                <div class="bar-value">19%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Março - 17%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 17%; background: var(--sla-good);">
+                                <div class="bar-value">17%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Abril - 16%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 16%; background: var(--sla-good);">
+                                <div class="bar-value">16%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Maio - 18%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 18%; background: var(--sla-good);">
+                                <div class="bar-value">18%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Junho - 18%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 18%; background: var(--sla-good);">
+                                <div class="bar-value">18%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Julho - 21%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 21%; background: var(--sla-warning);">
+                                <div class="bar-value">21%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Agosto - 21%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 21%; background: var(--sla-warning);">
+                                <div class="bar-value">21%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-item highlight-september">
+                        <div class="bar-label">Setembro - 19%</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 19%; background: var(--sla-good);">
+                                <div class="bar-value">19%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="evolution-section">
+                <h3 class="chart-title">
+                    <i class="fas fa-chart-line"></i> Análise da Reincidência
+                </h3>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <div class="metric-value">-10%</div>
+                        <div class="metric-label">Redução Jan-Set</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="metric-value">16%</div>
+                        <div class="metric-label">Melhor Resultado (Abr)</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-trend-down"></i>
+                        </div>
+                        <div class="metric-value">-2 p.p.</div>
+                        <div class="metric-label">Redução Ago-Set</div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 15px; font-weight: 500;">
+                    <strong>Melhoria consistente:</strong> Redução de 2 pontos percentuais desde agosto, indicando melhoria na qualidade do atendimento
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 9: Iniciativas e Melhorias -->
+        <div class="slide">
+            <div class="slide-header blue">
+                <h2 class="slide-title">Iniciativas e Melhorias Implementadas</h2>
+                <p class="slide-subtitle">Ações que impactaram positivamente os resultados</p>
+            </div>
+
+            <div class="initiatives-grid">
+                <div class="initiative-card">
+                    <h3 class="initiative-title">
+                        <i class="fas fa-laptop"></i> Astec - Autoatendimento
+                    </h3>
+                    <p>Autoatendimento para o cliente abrir o chamado e agendar no portal, com pessoa dedicada para casos especiais.</p>
+                </div>
+                
+                <div class="initiative-card orange">
+                    <h3 class="initiative-title">
+                        <i class="fas fa-sync-alt"></i> Workflow do CV
+                    </h3>
+                    <p>Mudanças no workflow do CV para melhorar a comunicação com o cliente e inicialização de cadastro das SLAs.</p>
+                </div>
+                
+                <div class="initiative-card purple">
+                    <h3 class="initiative-title">
+                        <i class="fas fa-building"></i> Vistorias - Organização
+                    </h3>
+                    <p>Divisão dos empreendimentos conforme Rasci, dando autonomia e sentimento de dono aos atendentes.</p>
+                </div>
+                
+                <div class="initiative-card">
+                    <h3 class="initiative-title">
+                        <i class="fas fa-bell"></i> Vistorias - Acompanhamento
+                    </h3>
+                    <p>Acompanhamento diário dos agendamentos e envio ativo das pesquisas NPS aos clientes.</p>
+                </div>
+                
+                <div class="initiative-card orange">
+                    <h3 class="initiative-title">
+                        <i class="fas fa-file-contract"></i> Termo de Notificação
+                    </h3>
+                    <p>Criação do termo de notificação no CV, reduzindo tempo de 1 dia para 30 minutos com maior confiança.</p>
+                </div>
+                
+                <div class="initiative-card purple">
+                    <h3 class="initiative-title">
+                        <i class="fas fa-envelope"></i> Templates e Orientações
+                    </h3>
+                    <p>Alteração na ordem de envio de templates com inclusão da ART, enviando orientações na primeira liberação.</p>
+                </div>
+                
+                <div class="initiative-card">
+                    <h3 class="initiative-title">
+                        <i class="fas fa-user-cog"></i> Usuários de Atendimento
+                    </h3>
+                    <p>Mudança nos usuários criando alertas no CV que são enviados por e-mail e aparecem instantaneamente no sistema.</p>
+                </div>
+                
+                <div class="initiative-card orange">
+                    <h3 class="initiative-title">
+                        <i class="fas fa-file-alt"></i> Template para Fiadores
+                    </h3>
+                    <p>Alteração no template de abertura de chamados dos fiadores, com orientação mais clara especialmente para linha Vitória.</p>
+                </div>
+            </div>
+
+            <div class="insight-box blue">
+                <h3 class="insight-title">
+                    <i class="fas fa-lightbulb"></i> Impacto das Iniciativas
+                </h3>
+                <p><strong>Resultado:</strong> Estas melhorias contribuíram diretamente para otimizar o trabalho da equipe, melhoria da experiência e contenção de volume para termos capacidade de absorção.</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 78%;"></div>
+                </div>
+                <p style="font-size: 0.9rem; margin-top: 10px; opacity: 0.9;">Eficiência operacional: Processos otimizados resultaram em ganhos de produtividade</p>
+            </div>
+        </div>
+
+        <!-- Slide 10: Conclusões e Próximos Passos -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2 class="slide-title">Conclusões e Próximos Passos</h2>
+                <p class="slide-subtitle">Resumo Executivo e Planejamento Estratégico</p>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card highlight-september">
+                    <div class="metric-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="metric-value">✓</div>
+                    <div class="metric-label">Meta Nota Satisfação Atingida</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="metric-value">+131%</div>
+                    <div class="metric-label">Crescimento Volume, mantendo qualidade</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="metric-value">69</div>
+                    <div class="metric-label">NPS com oportunidade</div>
+                </div>
+            </div>
+
+          
+            <div class="projection-section">
+                <h3 class="projection-title">
+                    <i class="fas fa-bullseye"></i> Metas para Q4/2025
+                </h3>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">≤ 2,0 dias</div>
+                        <div class="metric-label">Manter SLA</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">70%</div>
+                        <div class="metric-label">Resolução Mesmo Dia</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">70+</div>
+                        <div class="metric-label">NPS Consistente</div>
+                    </div>
+                </div>
+                <p style="margin-top: 15px; text-align: center; font-weight: 500;">
+                    <strong>Foco:</strong> Manter excelência operacional enquanto escala volume e reduz reincidência
+                </p>
+            </div>
+        </div>
+
+        <!-- Rodapé -->
+        <div class="footer">
+            <p>Relatório de Performance - Relacionamento com o Cliente | Atualizado em: Outubro/2025</p>
+            <p>Desenvolvido pela Equipe de RC | Dados: Janeiro a Setembro/2025</p>
+        </div>
+    </div>
+
+    <script>
+        // Animação para as barras de progresso
+        document.addEventListener('DOMContentLoaded', function() {
+            // Anima as barras de progresso
+            const progressBars = document.querySelectorAll('.progress-fill');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+
+            // Anima as barras dos gráficos
+            const barFills = document.querySelectorAll('.bar-fill');
+            barFills.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 800);
+            });
+
+            // Destacar setembro
+            const septemberItems = document.querySelectorAll('.highlight-september');
+            septemberItems.forEach(item => {
+                item.addEventListener('mouseover', function() {
+                    this.style.transform = 'scale(1.02)';
+                });
+                item.addEventListener('mouseout', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
